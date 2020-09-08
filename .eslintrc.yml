@@ -1,0 +1,65 @@
+env:
+  browser: false
+  commonjs: true
+  es6: true
+extends:
+  - airbnb-base
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2018
+rules: {
+  # disable rules
+  linebreak-style: 0,
+  semi: 0,
+  quotes: 0,
+  quote-props: 0,
+  camelcase: 0,
+  no-plusplus: 0,  # disallow the unary operators ++ and --
+  object-shorthand: 0, ## ECMAScript 6 provides a concise form for defining object literal methods and properties,
+  #  {func: ()=> a}, { func() {} } 
+  no-return-await: 0,
+  no-shadow: 0, # func(param1 , param2 ) {const func2 = (param1, param2) {}}
+  no-continue: 0, 
+  import/no-unresolved: 0, # ../../
+  prefer-arrow-callback: 0, # using es6 => function 
+  guard-for-in: 0, # disable for (key in value)
+  import/newline-after-import: 0, # require new line when import / require
+  prefer-destructuring: 0, # using const {keyName} = Object
+  no-underscore-dangle: 0, # allow _ : let _foo;
+  operator-linebreak: 0, # enforce consistent linebreak style for operators: a ? d \n: c ? 
+  no-undef: 0, # undeclared variable 
+  comma-dangle: 0, # Trailing commas in object literals :{ d: 2, c: 1, }
+  func-names: 0, # require function names match the name of the variable
+  no-restricted-globals: 0, #Disallowing usage of specific global variables 
+  no-multi-assign: 0, # Chaining the assignment of variables can lead to unexpected results and be difficult to read. : a = b = c = d;
+  global-require: 0,
+  import/no-dynamic-require: 0,
+  eqeqeq: 0, # ===
+  dot-notation: 0, # foo["bar"]; foo.bar
+  max-classes-per-file: 0, # Best practice is to keep each file limited to a single 
+  no-restricted-syntax: 0,
+  prefer-rest-params: 0, # suggest using rest parameters not arguments 
+  no-param-reassign: 0,
+  no-bitwise: 0, 
+  consistent-return: 0,
+  object-curly-newline: 0,
+  import/order: 0,
+  no-await-in-loop: 0,
+  no-use-before-define: 0,
+  no-lonely-if: 0,
+  no-unused-expressions: 0,
+  no-useless-escape: 0, # \? \#\+ ?* +
+  brace-style: 0,
+  class-methods-use-this: 0,
+  no-fallthrough: 0,
+  arrow-body-style: ['error', 'as-needed'],
+  radix: ['error', 'as-needed'],
+  no-multi-spaces: ["error", { ignoreEOLComments: true}],
+  max-len: ["error", { code: 140, ignoreTrailingComments: true, ignoreUrls: true, ignoreTemplateLiterals: true, ignoreStrings: true, ignoreComments: true}],
+  arrow-parens: ["error", "as-needed"],
+  no-unused-vars: ["error", { "args": "none" }],
+  no-extra-boolean-cast: 0,
+  no-console: 0
+}
